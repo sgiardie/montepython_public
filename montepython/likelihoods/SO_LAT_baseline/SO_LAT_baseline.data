@@ -1,0 +1,27 @@
+# SO LAT baseline mock likelihood, inheriting the Likelihood_mock_cmb class. 
+# the noise file is taken from https://github.com/simonsobs/so_noise_models/tree/master/LAT_comp_sep_noise/v3.1.0, choosing the "baseline" configuration and standard ILC noise
+# only primary CMB, TTTEEE
+
+# Where to read/write fiducial model
+SO_LAT_baseline.data_directory     = data.path['data']
+SO_LAT_baseline.fiducial_file      = 'SO_LAT_baseline_fiducial.dat'
+
+# Experimental sensitivity
+SO_LAT_baseline.l_min              = 10
+SO_LAT_baseline.l_max              = 8000
+SO_LAT_baseline.f_sky              = 0.40
+
+# Do you want to include Bmodes (Gaussian approximation)?
+SO_LAT_baseline.Bmodes = False
+SO_LAT_baseline.delensing = False
+
+# Do you want to use noise from file?
+SO_LAT_baseline.noise_from_file = True
+
+SO_LAT_baseline.noise_file = 'SO_LAT_Nell_T_E_baseline_fsky0p4_standard_ILC.txt'
+
+# Do you want to include lensing extraction?
+SO_LAT_baseline.LensingExtraction = False
+SO_LAT_baseline.neglect_TD = True
+SO_LAT_baseline.unlensed_clTTTEEE = False
+SO_LAT_baseline.ExcludeTTTEEE = False

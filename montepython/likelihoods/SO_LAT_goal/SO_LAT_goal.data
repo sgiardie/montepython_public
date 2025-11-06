@@ -1,0 +1,27 @@
+# SO LAT goal mock likelihood, inheriting the Likelihood_mock_cmb class. 
+# the noise file is taken from https://github.com/simonsobs/so_noise_models/tree/master/LAT_comp_sep_noise/v3.1.0, choosing the "goal" configuration and standard ILC noise
+# only primary CMB, TTTEEE
+
+# Where to read/write fiducial model
+SO_LAT_goal.data_directory     = data.path['data']
+SO_LAT_goal.fiducial_file      = 'SO_LAT_goal_fiducial.dat'
+
+# Experimental sensitivity
+SO_LAT_goal.l_min              = 10
+SO_LAT_goal.l_max              = 8000
+SO_LAT_goal.f_sky              = 0.40
+
+# Do you want to include Bmodes (Gaussian approximation)?
+SO_LAT_goal.Bmodes = False
+SO_LAT_goal.delensing = False
+
+# Do you want to use noise from file?
+SO_LAT_goal.noise_from_file = True
+
+SO_LAT_goal.noise_file = 'SO_LAT_Nell_T_E_goal_fsky0p4_standard_ILC.txt'
+
+# Do you want to include lensing extraction?
+SO_LAT_goal.LensingExtraction = False
+SO_LAT_goal.neglect_TD = True
+SO_LAT_goal.unlensed_clTTTEEE = False
+SO_LAT_goal.ExcludeTTTEEE = False
