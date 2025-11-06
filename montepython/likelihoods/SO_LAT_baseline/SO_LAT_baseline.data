@@ -7,8 +7,8 @@ SO_LAT_baseline.data_directory     = data.path['data']
 SO_LAT_baseline.fiducial_file      = 'SO_LAT_baseline_fiducial.dat'
 
 # Experimental sensitivity
-SO_LAT_baseline.l_min              = 10
-SO_LAT_baseline.l_max              = 8000
+SO_LAT_baseline.l_min              = 30
+SO_LAT_baseline.l_max              = 5000
 SO_LAT_baseline.f_sky              = 0.40
 
 # Do you want to include Bmodes (Gaussian approximation)?

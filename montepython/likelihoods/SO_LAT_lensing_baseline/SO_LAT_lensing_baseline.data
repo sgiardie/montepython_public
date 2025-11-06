@@ -1,0 +1,27 @@
+# SO LAT lensing goal mock likelihood, inheriting the Likelihood_mock_cmb class. 
+# the noise file is taken from https://github.com/simonsobs/so_noise_models/tree/master/LAT_lensing_noise/lensing_v3_1_1, choosing the "baseline" configuration
+# only CMB lensing, since the ell range of the lensing noise curves is different from the range of the primary CMB noise
+
+# Where to read/write fiducial model
+SO_LAT_lensing_baseline.data_directory     = data.path['data']
+SO_LAT_lensing_baseline.fiducial_file      = 'SO_LAT_lensing_baseline_fiducial.dat'
+
+# Experimental sensitivity
+SO_LAT_lensing_baseline.l_min              = 30
+SO_LAT_lensing_baseline.l_max              = 3000
+SO_LAT_lensing_baseline.f_sky              = 0.4
+
+# Do you want to include Bmodes (Gaussian approximation)?
+SO_LAT_lensing_baseline.Bmodes = False
+SO_LAT_lensing_baseline.delensing = False
+
+# Do you want to use noise from file?
+SO_LAT_lensing_baseline.noise_from_file = True
+
+SO_LAT_lensing_baseline.noise_file = 'SO_LAT_lensing_baseline.txt'
+
+# Do you want to include lensing extraction?
+SO_LAT_lensing_baseline.LensingExtraction = True
+SO_LAT_lensing_baseline.neglect_TD = True
+SO_LAT_lensing_baseline.unlensed_clTTTEEE = False
+SO_LAT_lensing_baseline.ExcludeTTTEEE = True
